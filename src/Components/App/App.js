@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './App.css';
+import RockPicker from '../RockPicker/RockPicker.js';
 
 import { connect } from 'react-redux';
 
@@ -29,12 +30,14 @@ clickHandler = ()=> {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Hello From App.js</h1>
-          <p>Clicks: {this.props.reduxState}</p>
+          <h1>Rock and/or Roll</h1>
+          <p>Rocks: {this.props.reduxState}</p>
         </header> 
-        <button onClick={this.clickHandler}>ClickMe</button>
-        <button onClick={this.unClickHandler}>UnClickMe</button>
-      </div>
+        <RockPicker dispatch={this.props.dispatch} />
+        <RockPicker dispatch={this.props.dispatch} />
+        <RockPicker dispatch={this.props.dispatch}/>
+        {/* this is sending the dispatch property of the App.js down to this component */}
+        </div>
     );
   }
 }//end component
