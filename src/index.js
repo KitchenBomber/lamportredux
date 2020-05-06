@@ -12,13 +12,15 @@ const firstReducerInitialState = 0;
 const firstReducer = (state = firstReducerInitialState, action) => {
   console.log('in firstReducer', state, action.payload);
   if(action.type === 'pick'){
-    return state = state + action.payload;
+    return state + action.payload;
   } else if (action.type === 'drop') {
-    return state = state - action.payload;
+    return state - action.payload;
   } else if (action.type === 'scoop') {
-    return state = state + action.payload;
+    return state + action.payload;
   } else if (action.type === 'dropAll') {
     return state - action.payload;
+  }else if (action.type === 'reproduce'){
+    return state + action.payload;
   }
   return state;
 }// firstReducer returning an empty object
