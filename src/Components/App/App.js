@@ -33,9 +33,10 @@ clickHandler = ()=> {
           <h1>Rock and/or Roll</h1>
           <p>Rocks: {this.props.reduxState}</p>
         </header> 
-        <RockPicker dispatch={this.props.dispatch} />
-        <RockPicker dispatch={this.props.dispatch} />
-        <RockPicker dispatch={this.props.dispatch}/>
+        <RockPicker name={"Alan's"} dispatch={this.props.dispatch} />
+        <RockPicker name={"Heather's"} dispatch={this.props.dispatch} />
+        <RockPicker name={"Mohamed's"} dispatch={this.props.dispatch} />
+        <RockPicker name={"Thy's"} dispatch={this.props.dispatch} />
         {/* this is sending the dispatch property of the App.js down to this component */}
         </div>
     );

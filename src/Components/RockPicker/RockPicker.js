@@ -19,9 +19,10 @@ class RockPicker extends Component {
             this.setState({
                 rocks: this.state.rocks + 1
             })
-            this.props.dispatch({ type: 'pick', paylaod: 1 });
-        } else if (property === 'drop') {
+            this.props.dispatch({ type: 'pick', payload: 1 });
+        } else if (property === 'drop' && this.state.rocks > 0) {
             this.setState({
+
                 rocks: this.state.rocks - 1
             })
             this.props.dispatch({ type: 'drop', payload: 1 });
@@ -43,7 +44,7 @@ class RockPicker extends Component {
     render() {
         return (
             <div>
-                <h1>RockPicker</h1>
+                <h1>{this.props.name} RockPicker</h1>
                 <h3>{this.props.test}</h3>
                 <p>My Rocks: {this.state.rocks}</p>
                 <button onClick={(event) => this.clickHandler(event, 'scoop')}>Scoop 5 Rocks</button>
